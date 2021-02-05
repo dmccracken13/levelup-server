@@ -1,0 +1,22 @@
+[
+    {
+        "model": "levelupapi.events",
+        "pk": 1,
+        "fields": {
+            "scheduled_time": "2020-08-28T14:51:39.989Z",
+            "game": 2,
+            "location": "Clan zoom room",
+            "scheduler": 1
+        }
+    },
+    {
+        "model": "levelupapi.events",
+        "pk": 2,
+        "fields": {
+            "scheduled_time": "2020-08-28T14:51:39.989Z",
+            "game": 1,
+            "location": "Jim's House",
+            "scheduler": 1
+        }
+    }
+]
