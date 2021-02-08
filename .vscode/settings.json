@@ -6,5 +6,6 @@
             "database": "db.sqlite3",
             "name": "levelup.db"
         }
-    ]
+    ],
+    "python.linting.pylintEnabled": true
 }
