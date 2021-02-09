@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.authtoken.models import Token
-from levelupapi.models import Gamers
+from levelupapi.models import Gamer
 
 
 @csrf_exempt
