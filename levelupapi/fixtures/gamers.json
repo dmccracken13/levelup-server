@@ -1,6 +1,6 @@
 [
     {
-        "model": "levelupapi.gamers",
+        "model": "levelupapi.gamer",
         "pk": 1,
         "fields": {
             "user": 1,

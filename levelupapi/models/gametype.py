@@ -1,6 +1,6 @@
 from django.db import models
 
 
-class Game_Types(models.Model):
+class GameType(models.Model):
 
     types = models.CharField(max_length=50)

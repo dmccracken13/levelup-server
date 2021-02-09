@@ -1,24 +1,35 @@
 [
     {
-        "model": "levelupapi.games",
+        "model": "levelupapi.game",
         "pk": 1,
         "fields": {
-            "title": "Dungeons of Dragons",
+            "title": "Welcome To",
+            "gamer": 1,
+            "game_type": 1,
             "number_of_players": 4,
-            "description": "pen and paper role playing fantasy game",
-            "game_type": 2,
-            "gamer": 1
+            "description": "Some random description"
         }
     },
     {
-        "model": "levelupapi.games",
+        "model": "levelupapi.game",
         "pk": 2,
         "fields": {
-            "title": "World of Warcraft",
-            "number_of_players": 8,
-            "description": "MMO fantasy game by Blizzard",
-            "game_type": 3,
-            "gamer": 1
+            "title": "Settlers of Catan",
+            "gamer": 1,
+            "game_type": 1,
+            "number_of_players": 4,
+            "description": "Catan, previously known as The Settlers of Catan or simply Settlers, is a multiplayer board game designed by Klaus Teuber. It was first published in 1995 in Germany by Franckh-Kosmos Verlag (Kosmos) as Die Siedler von Catan. Players take on the roles of settlers, each attempting to build and develop holdings while trading and acquiring resources. Players gain points as their settlements grow; the first to reach a set number of points, typically 10, wins. The game and its many expansions are also published by Catan Studio, Filosofia, GP, Inc., 999 Games, Κάισσα, and Devir."
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 3,
+        "fields": {
+            "title": "Dungeons & Dragons",
+            "gamer": 1,
+            "game_type": 2,
+            "number_of_players": 5,
+            "description": "Dungeons & Dragons (commonly abbreviated as D&D or DnD)[2] is a fantasy tabletop role-playing game (RPG) originally designed by Gary Gygax and Dave Arneson.[3][4][5] It was first published in 1974 by Tactical Studies Rules, Inc. (TSR).[5] It has been published by Wizards of the Coast (now a subsidiary of Hasbro) since 1997. The game was derived from miniature wargames, with a variation of the 1971 game Chainmail serving as the initial rule system.[4][6] D&D's publication is commonly recognized as the beginning of modern role-playing games and the role-playing game industry.[5][7]"
         }
     }
 ]
