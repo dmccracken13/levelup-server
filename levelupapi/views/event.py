@@ -62,7 +62,7 @@ class Events(ViewSet):
         event = Event.objects.get(pk=pk)
         event.scheduled_time = request.data["scheduled_time"]
         event.game = request.data["game"]
-        event.location = request.data["location"]]
+        event.location = request.data["location"]
         event.scheduler = scheduler
 
         game = Game.objects.get(pk=request.data["gameId"])
