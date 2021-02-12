@@ -8,7 +8,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from levelupapi.models import Game, Event, Gamer
-from levelupapi.views.game import GameSerializer
+# from levelupapi.views.game import GameSerializer
 
 
 class Events(ViewSet):
@@ -23,8 +23,8 @@ class Events(ViewSet):
         gamer = Gamer.objects.get(user=request.auth.user)
 
         event = Event()
-        event.scheduled_time = request.data["scheduled_time"]
-        event.game = request.data["game"]
+        event.scheduled_time = request.data["scheduledTime"]
+        # event.game = request.data["game"]
         event.location = request.data["location"]
         event.scheduler= gamer
 
@@ -60,7 +60,7 @@ class Events(ViewSet):
         scheduler = Gamer.objects.get(user=request.auth.user)
 
         event = Event.objects.get(pk=pk)
-        event.scheduled_time = request.data["scheduled_time"]
+        event.scheduled_time = request.data["scheduledTime"]
         event.game = request.data["game"]
         event.location = request.data["location"]
         event.scheduler = scheduler
@@ -121,6 +121,12 @@ class EventGamerSerializer(serializers.ModelSerializer):
         model = Gamer
         fields = ['user']
 
+class GameSerializer(serializers.ModelSerializer):
+    """JSON serializer for games"""
+    class Meta:
+        model = Game
+        fields = ('title',)
+
 class EventSerializer(serializers.ModelSerializer):
     """JSON serializer for events"""
     scheduler = EventGamerSerializer(many=False)
@@ -130,9 +136,3 @@ class EventSerializer(serializers.ModelSerializer):
         model = Event
         fields = ('id', 'game', 'scheduler',
                 'location', 'scheduled_time')
-
-# class GameSerializer(serializers.ModelSerializer):
-#     """JSON serializer for games"""
-#     class Meta:
-#         model = Game
-#         fields = ('id', 'title', 'maker', 'number_of_players', 'skill_level')
