@@ -59,7 +59,7 @@ def register_user(request):
     )
 
     # Now save the extra info in the levelupapi_gamer table
-    gamer = Gamers.objects.create(
+    gamer = Gamer.objects.create(
         bio=req_body['bio'],
         user=new_user
     )
